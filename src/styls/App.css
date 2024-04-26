@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --color-1: rgba(83, 172, 255, 1);
+  --color-2: rgba(49, 49, 49, 1);
+  --color-red: #d94111;
+  --color-green: #118f4b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#navBar {
+  filter: drop-shadow(10px 4px 21.1px rgba(0, 0, 0, 0.38));
+}
+
+#navBar ul li.active {
+  color: white;
+}
+
+.alertNave::before {
+  content: "6";
+  position: absolute;
+  background-color: rgba(17, 143, 75, 1);
+  color: white;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  font-size: 8.78px;
+  font-weight: 700;
+  top: -2px;
+  right: 2px;
+  text-align: center;
+}
+
+header .alertNave::before {
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+}
+header h2::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 53%;
+  transform: translateY(-50%);
+  left: 0;
+  top: 50%;
+  background-color: var(--color-1);
+}
+
+.content .border-here::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #575a61;
+  width: 1px;
+  height: 60%;
+}
+
+.content .rwo.active {
+  background-color: var(--color-1);
+}
+
+.filters .market label {
+  padding-left: 25px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+}
+.filters .market label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #313131;
+}
+.filters .market label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #202020;
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .filters .market label::after {
+    top: 4.5px;
+  }
+}
+
+.filters .market input[type="radio"]:checked + label::after {
+  background-color: var(--color-1);
+}
+
+.filters .gradient {
+  background: -webkit-linear-gradient(#202020, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.filters .gradient2 {
+  background: -webkit-linear-gradient(white, #202020);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
